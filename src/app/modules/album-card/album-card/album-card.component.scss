@@ -1,0 +1,42 @@
+.album-card {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  padding: 10px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    border-radius: 8px;
+    background-image: linear-gradient(to bottom, white, black);
+  }
+  .badge {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .infos {
+    margin-top: auto;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    .titles {
+      p {
+        margin: 5px;
+      }
+      .title {
+        font-size: 15px;
+      }
+      .subtitle {
+        font-size: 13px;
+      }
+    }
+  }
+}

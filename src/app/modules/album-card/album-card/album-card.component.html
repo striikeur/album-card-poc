@@ -1,1 +1,15 @@
-<p>album-card works!</p>
+<div class="album-card">
+  <img [src]="imgUrl" alt="{{ title }}" />
+  <div class="badge" *ngIf="badgeContent">
+    <ng-container
+      [ngTemplateOutlet]="badgeContent.badgeTemplate"
+    ></ng-container>
+  </div>
+
+  <div class="infos">
+    <div class="titles">
+      <p class="title">{{ title }}</p>
+      <p class="subtitle">{{ subtitle }}</p>
+    </div>
+  </div>
+</div>
