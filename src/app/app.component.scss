@@ -1,0 +1,21 @@
+.album-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  .card {
+    margin: 20px;
+  }
+}
+.badge {
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.current {
+  background-color: #db9d59;
+}
+
+.valid {
+  background-color: #65ab68;
+}

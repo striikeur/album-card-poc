@@ -1,1 +1,47 @@
-<router-outlet></router-outlet>
+<div class="album-cards">
+  <pxl-album-card
+    title="Naissance petit monstre"
+    [subtitle]="getSubtitle()"
+    [imgUrl]="getImgUrl()"
+    optionIcon="more_vert"
+    class="card"
+  >
+    <ng-template album-badge>
+      <div class="badge current">
+        <mat-icon> autorenew </mat-icon>
+        En cours
+      </div>
+    </ng-template>
+    <ng-template album-menu>
+      <button mat-menu-item>Option 1</button>
+      <button mat-menu-item>Option 2</button>
+    </ng-template>
+  </pxl-album-card>
+
+  <pxl-album-card
+    title="Naissance petit monstre"
+    [subtitle]="getSubtitle()"
+    [imgUrl]="getImgUrl()"
+    class="card"
+    optionIcon="more_vert"
+  >
+    <ng-template album-menu>
+      <button mat-menu-item>Option 1</button>
+      <button mat-menu-item>Option 2</button>
+    </ng-template>
+  </pxl-album-card>
+
+  <pxl-album-card
+    title="Naissance petit monstre"
+    [subtitle]="getSubtitle()"
+    [imgUrl]="getImgUrl()"
+    class="card"
+  >
+    <ng-template album-badge>
+      <div class="badge valid">
+        <mat-icon> done </mat-icon>
+        Terminé
+      </div>
+    </ng-template>
+  </pxl-album-card>
+</div>

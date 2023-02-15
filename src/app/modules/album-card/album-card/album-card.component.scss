@@ -1,0 +1,64 @@
+.album-card {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  padding: 10px;
+  .img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 8px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+  }
+  .img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+  }
+
+  .badge {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .infos {
+    margin-top: auto;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .menu {
+      cursor: pointer;
+    }
+    .titles {
+      p {
+        margin: 5px;
+      }
+      .title {
+        font-size: 15px;
+      }
+      .subtitle {
+        font-size: 13px;
+      }
+    }
+  }
+}

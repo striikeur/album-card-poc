@@ -1,1 +1,30 @@
-<p>album-card works!</p>
+<div class="album-card">
+  <div class="img">
+    <img [src]="imgUrl" alt="{{ title }}" />
+  </div>
+  <div class="badge" *ngIf="badgeContent">
+    <ng-container
+      [ngTemplateOutlet]="badgeContent.badgeTemplate"
+    ></ng-container>
+  </div>
+
+  <div class="infos">
+    <div class="titles">
+      <p class="title">{{ title }}</p>
+      <p class="subtitle">{{ subtitle }}</p>
+    </div>
+    <div
+      [matMenuTriggerFor]="menu"
+      *ngIf="albumMenuContent && optionIcon"
+      class="menu"
+    >
+      <mat-icon>{{ optionIcon }}</mat-icon>
+    </div>
+    <mat-menu #menu="matMenu">
+      <ng-container
+        *ngIf="albumMenuContent && optionIcon"
+        [ngTemplateOutlet]="albumMenuContent.menuTemplate"
+      ></ng-container>
+    </mat-menu>
+  </div>
+</div>
