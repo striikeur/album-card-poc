@@ -11,6 +11,6 @@ export class AppComponent {
   }
 
   public getImgUrl(): string {
-    return 'https://picsum.photos/200/300';
+    return 'https://picsum.photos/400/400';
   }
 }
